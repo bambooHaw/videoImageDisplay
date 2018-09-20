@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QFile>
 #include <QDebug>
+#include <QTimer>
 
 #include "global.h"
 using namespace std;
@@ -21,9 +22,10 @@ public:
     ~MainWindow();
 
 public slots:
-    int slotRaw2rgbWithCV(void);
+    int slotOpencvRealtimeShowRaw();
 private:
     Ui::MainWindow *ui;
+    QTimer dspTimer;
 };
 
 #endif // MAINWINDOW_H
